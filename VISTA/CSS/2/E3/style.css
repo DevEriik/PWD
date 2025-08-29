@@ -1,0 +1,13 @@
+body {
+  background-color: #f8f9fa; /* Color de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-card {
+  width: 350px;
+}
+.form-control {
+  border-left: none; /* Elimina el borde izquierdo para los íconos */
+}

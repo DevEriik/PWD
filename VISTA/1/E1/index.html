@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar Numero</title>
+  </head>
+  <body>
+    <div class="conteiner">
+      <h1>Verificar si un numer es positivo, negativo o cero</h1>
+      <form action="vernumero.php" method="POST" id="numberForm">
+        <label for="numero">Introduce un numero:</label>
+        <input type="number" name="numero" id="numero" required />
+        <div class="error-message" id="numError">
+          Por favor, introduce un número válido.
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <script>
+      //Validamos con JavaScript para mayor control o mensajes personalizados
+
+      const form = document.getElementById("numberForm");
+      const numberInput = document.getElementById("numero");
+      const numError = document.getElementById("numError");
+
+      form.addEventListener("submit", function (event) {
+        //Verifica si la entada esta vacia o no es un numero valido
+        if (numberInput.value.trim === "" || isNaN(numberInput.value)) {
+          numError.style.display = "block"; //Muestra el mensaje de error
+          event.preventDefault(); //Evita el envio del formulario
+        } else {
+          numError.style.display = "none"; //Oculta el mensaje de error
+        }
+      });
+
+      //  Oculta el mensaje de error cuando el usuario empieza a escribir
+      numberInput.addEventListener("input", function () {
+        if (numberInput.value.trim() !== "" && !isNaN(numberInput.value)) {
+          numError.style.display = "none"; //Oculta el mensaje de error
+        }
+      });
+    </script>
+  </body>
+</html>
