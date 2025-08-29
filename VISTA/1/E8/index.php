@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="../../CSS/1/E8/layout.css">
     <title>Cine Cinem@s</title>
 </head>
 <body>
     <div class="conteiner">
-        <form name="cine-form" id="cine-form" method="GET" action="CalculoEntrada.php">
+        <form name="cine-form" id="cine-form" method="GET" action="../../../CONTROL/1/E8/CalculoEntrada.php">
             <h1>Cine Cinem@s</h1> <br>
 
             <label for="edad">Ingrese su edad.</label> <br>

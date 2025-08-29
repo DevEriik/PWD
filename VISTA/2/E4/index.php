@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/2/E4/style.css">
     <title>Empresa Cinem@s</title>
 </head>
 <body>
     <div class="container my-5">
-        <form id="pelicula-form" method="GET" action="pelicula-intro.php" class="needs-validation" novalidate>
+        <form id="pelicula-form" method="GET" action="../../../CONTROL/2/E4/pelicula-intro.php" class="needs-validation" novalidate>
             <div class="text-center mb-4">
                 <h3 id="title-cine">Cinem@s</h3>
             </div>

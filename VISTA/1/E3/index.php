@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="../../CSS/1/E3/layout.css">
     <title>Datos</title>
 </head>
 <body>
     <div class="conteiner">
-        <form name="datos_form" method="GET" action="mensaje-ejercicio5.php">
+        <form name="datos_form" method="GET" action="../../../CONTROL/1/E3/mensaje-ejercicio5.php">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre_form" id="nombre_form"> <br> <br>
 
