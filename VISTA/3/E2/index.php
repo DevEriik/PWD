@@ -15,7 +15,7 @@
         
         <form method="POST" action="../../../CONTROL/3/E2/tipoDato.php" enctype="multipart/form-data">
             <div class="mb-3">
-                <input type="file">
+                <input name="input-txt" type="file">
             </div>
             <div>
                 <button type="submit">Enviar archivo</button>
