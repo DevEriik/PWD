@@ -1,15 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("pelicula-form");
+  const inputArchivo = document.getElementById("portada-pelicula");
 
   formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    formulario.classList.add("was-validated");
+
     const anioValido = validarAnio();
     const duracionValida = validarDuracion();
 
+    // 2. Si la validación nativa del formulario falla, detenemos el envío
+    if (!formulario.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+
     if (!anioValido || !duracionValida) {
       e.stopPropagation();
-      formulario.classList.add("was-validated");
       return;
     }
 
@@ -23,11 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.json()) //*Espera respuesta JSON del servidor
       .then((data) => {
+        const inputArchivo = document.getElementById("portada-pelicula");
+        const feedbackArchivo = document.getElementById("feedback-portada");
         if (data.exito) {
+          inputArchivo.classList.add("is-valid");
           //?Llama a la funcion para mostrar los datos, ahora pasando la URL de la imagen
           mostrarDatos(data.url_imagen, data.datos_pelicula);
         } else {
-          alert(data.error);
+          //! Si hay un error, muestra el feedback de error de Bootstrap
+          inputArchivo.classList.add("is-invalid");
+          feedbackArchivo.textContent = data.error;
         }
       })
       .catch((error) => console.error("Error:", error));

@@ -91,8 +91,10 @@
             <div class="row mt-3">
                 <div class="col-12">
                     <div class="mb-3">
-                        <label for="portada-pelicula">SELECCIONES LA PORTADA PARA LA PELICULA</label>
-                        <input name="input-file" type="file">
+                        <label for="portada-pelicula">SELECCIONES LA PORTADA PARA LA PELICULA</label> <br>
+                        <input name="input-file" type="file" id="portada-pelicula" required>
+                        <div class="invalid-feedback" id="feedback-portada">
+                        </div>
                     </div>
                 </div>
             </div>
