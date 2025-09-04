@@ -21,4 +21,4 @@ if ($_POST) {
     echo "<p style='color: red;'>Error: El valor enviado no es un numero valido";
 }
 ?>
-<a href="index.html">Volver al formulario</a>
+<a href="../../../VISTA/1/E1/index.html">Volver al formulario</a>
