@@ -107,6 +107,6 @@
         </div>
     </div>
     <script src="../../../Boostrap-JS/bootstrap.bundle.min.js"></script>
-    <script src="validaciones.js"></script>
+    <script src="../../JS/2/E4/validaciones.js"></script>
 </body>
 </html>
