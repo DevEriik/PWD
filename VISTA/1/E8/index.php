@@ -12,7 +12,7 @@
             <h1>Cine Cinem@s</h1> <br>
 
             <label for="edad">Ingrese su edad.</label> <br>
-            <input name="edad-est" id="edad-est" type="number" required> <br> <br>
+            <input name="edad-est" id="edad-est" type="number" required min="0"> <br> <br>
             
             <label for="estudiante">Marque si es estudiante o no</label> <br>
             <input type="radio" name="estudiantes" value="valor1" required> Si<br>
