@@ -49,7 +49,7 @@
     submitHandler: function(form) {
       // Esta función se ejecuta si el formulario es válido
       alert("Formulario validado correctamente. Enviando...");
-      form.submit();
+      //form.submit();
     }
   });
 });
