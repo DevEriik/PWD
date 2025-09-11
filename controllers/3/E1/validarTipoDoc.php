@@ -31,7 +31,7 @@
         if ($esTipoValido && $esTamanoValido) {
 
             //? Creamos la ruta de destino. La carpeta "uploads" debe existir.
-            $rutaDestino = "uploads/" . basename($nombreArchivo);
+            $rutaDestino = "../../../assets/uploads" . basename($nombreArchivo);
 
             if (move_uploaded_file($rutaTemporal, $rutaDestino)) {
                 //!Si es exitoso creo el mensaje con el enlace. 

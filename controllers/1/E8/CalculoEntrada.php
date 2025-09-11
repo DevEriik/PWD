@@ -22,4 +22,4 @@
 
 ?>
     <br> <br>
-    <a href="../../../VISTA/1/E8/index.php">Limpiar formulario y volver a consultar</a>
+    <a href="../../../views/1/E8/index.php">Limpiar formulario y volver a consultar</a>

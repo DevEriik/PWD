@@ -37,7 +37,7 @@ if (isset($_GET['lunes']) && isset($_GET['martes']) && isset($_GET['miercoles'])
             <strong><?php echo $totalHoras; ?></strong> horas por semana
         </p>
 
-        <a href="../../../VISTA/1/E2/index.html">Volver al formulario</a>
+        <a href="../../../views/1/E2/index.html">Volver al formulario</a>
     </div>
 </body>
 </html>
