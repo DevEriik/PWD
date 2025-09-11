@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Boostrap-CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
     <link rel="stylesheet" href="../../CSS/3/E1/layout.css">
     <title>Subir Archivo</title>
 </head>
@@ -24,6 +24,6 @@
 </div>
 
 
-    <script href="../../../Boostrap-JS/bootstrap.bundle.min.js"></script>
+    <script href="../../JS/bootstrap.bundle.min.js"></script>
 </body>
 </html>

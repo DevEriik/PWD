@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../Boostrap-CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../CSS/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/2/E3/style.css">
@@ -38,7 +38,7 @@
             </form>
         </div>
     </div>
-    <script src="../../../Boostrap-JS/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/bootstrap.bundle.min.js"></script>
 
     <script src="validacion.js"></script>
 </body>

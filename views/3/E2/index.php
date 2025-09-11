@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/3/E2/layout.css">
-    <link rel="stylesheet" href="../../../Boostrap-CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
     <title>Documento TXT</title>
 </head>
 <body>
@@ -24,6 +24,6 @@
     </div>
 </div>
 
-    <script src="../../../Boostrap-JS/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/bootstrap.bundle.min.js"></script>
 </body>
 </html>

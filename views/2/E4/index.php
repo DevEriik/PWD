@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../Boostrap-CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../../CSS/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/2/E4/style.css">
     <title>Empresa Cinem@s</title>
 </head>
@@ -106,7 +106,7 @@
             
         </div>
     </div>
-    <script src="../../../Boostrap-JS/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/bootstrap.bundle.min.js"></script>
     <script src="../../JS/2/E4/validaciones.js"></script>
 </body>
 </html>
