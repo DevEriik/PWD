@@ -13,7 +13,7 @@
     <div class="">
         <h3>Archivos TXT</h3>
         
-        <form method="POST" action="../../../CONTROL/3/E2/tipoDato.php" enctype="multipart/form-data">
+        <form method="POST" action="../../../controllers/3/E2/tipoDato.php" enctype="multipart/form-data">
             <div class="mb-3">
                 <input name="input-txt" type="file">
             </div>

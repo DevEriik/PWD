@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="conteiner">
-        <form name="form-cal" method="GET"  action="../../../CONTROL/1/E7/calcula.php">
+        <form name="form-cal" method="GET"  action="../../../controllers/1/E7/calcula.php">
             <input type="text" name="valor1" id="valor1" required> <br>
             <input type="text" name="valor2" id="valor2" required> <br>
             <select name="operacion" id="operacion">

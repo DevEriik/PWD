@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container my-5">
-        <form id="pelicula-form" method="POST" action="../../../CONTROL/3/E3/pelicula-intro.php" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <form id="pelicula-form" method="POST" action="../../../controllers/3/E3/pelicula-intro.php" class="needs-validation" enctype="multipart/form-data" novalidate>
             <div class="text-center mb-4">
                 <h3 id="title-cine">Cinem@s</h3>
             </div>

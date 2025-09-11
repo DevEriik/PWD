@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="conteiner">
-        <form name="datos-alum" method="GET"  action="../../../CONTROL/1/E6/mensaje-alumno.php">
+        <form name="datos-alum" method="GET"  action="../../../controllers/1/E6/mensaje-alumno.php">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre_form" id="nombre_form"> <br> <br>
 

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container my-5">
-        <form id="pelicula-form" method="GET" action="../../../CONTROL/2/E4/pelicula-intro.php" class="needs-validation" novalidate>
+        <form id="pelicula-form" method="GET" action="../../../controllers/2/E4/pelicula-intro.php" class="needs-validation" novalidate>
             <div class="text-center mb-4">
                 <h3 id="title-cine">Cinem@s</h3>
             </div>

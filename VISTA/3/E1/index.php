@@ -11,7 +11,7 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
         <div class=" container">
             <h3>Formulario subida de archivos...</h3>
-            <form name="form-subir" id="form-subir" method="POST" action="../../../CONTROL/3/E1/validarTipoDoc.php" enctype="multipart/form-data">
+            <form name="form-subir" id="form-subir" method="POST" action="../../../controllers/3/E1/validarTipoDoc.php" enctype="multipart/form-data">
                 <div class="mb-3 input-file">
                     <input type="file" name="form-subir">
                 </div>

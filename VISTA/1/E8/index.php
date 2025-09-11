@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="conteiner">
-        <form name="cine-form" id="cine-form" method="GET" action="../../../CONTROL/1/E8/CalculoEntrada.php">
+        <form name="cine-form" id="cine-form" method="GET" action="../../../controllers/1/E8/CalculoEntrada.php">
             <h1>Cine Cinem@s</h1> <br>
 
             <label for="edad">Ingrese su edad.</label> <br>

@@ -15,7 +15,7 @@
             <h3 class="card-title text-center mb-4">Member Login</h3>
 
             <button type="button" class="btn-close" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
-            <form name="login-form" id="login-form" method="POST" action="../../../CONTROL/2/E3/verificaPass.php">
+            <form name="login-form" id="login-form" method="POST" action="../../../controllers/2/E3/verificaPass.php">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                     <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Username"required>
