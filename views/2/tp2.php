@@ -18,8 +18,8 @@
                 <div class="col-md-8 d-flex justify-content-center">
                     <a href="?page=tp2&ejercicio=E4" class="btn btn-dark">Ejercicio 4</a>
                 </div>
-                <div class="my-5">
-                    <a href="?page=home" class="btn btn-danger"> < Volver </a>
+                <div class="my-5 d-flex justify-content-center ">
+                    <a href="?page=home" class="btn btn-danger"> 🡨 </a>
                 </div>
             </div>
         </div>

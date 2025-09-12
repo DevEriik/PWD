@@ -17,6 +17,9 @@
                         <li class="nav-item">
                             <a href="?page=tp3" class="nav-link">TP 3</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="?page=tp4" class="nav-link">TP 4</a>
+                        </li>
                     </ul>
             </div>
         </div>

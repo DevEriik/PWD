@@ -107,7 +107,7 @@
         </div>
     </div>
     <div class="my-5 d-flex justify-content-center">
-        <a href="?page=tp2" class="btn btn-danger"> < Volver </a>
+        <a href="?page=tp2" class="btn btn-danger"> 🡨 </a>
     </div>
     <script src="../../JS/bootstrap.bundle.min.js"></script>
     <script src="../../JS/2/E4/validaciones.js"></script>

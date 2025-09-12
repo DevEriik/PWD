@@ -41,7 +41,7 @@
         </div>
       </form>
         <div class="mt-5">
-            <a href="?page=tp2" class="btn btn-danger"> < Volver </a>
+            <a href="?page=tp2" class="btn btn-danger"> 🡨 </a>
         </div>
     </div>
   </div>

@@ -35,8 +35,8 @@
                 <div class="col-md-8 d-flex justify-content-center">
                     <a href="?page=tp1&ejercicio=E8" class="btn btn-dark">Ejercicio 8</a>
                 </div>
-                <div class="my-2">
-                    <a href="?page=home" class="btn btn-danger"> < Volver </a>
+                <div class="my-2 d-flex justify-content-center">
+                    <a href="?page=home" class="btn btn-danger"> 🡨 </a>
                 </div>
             </div>
         </div>

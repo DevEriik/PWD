@@ -8,11 +8,7 @@
         <div class="container my-5">
             <h3 class="text-center">Ejercicios Trabajo Practico Nro 4</h3>
             <div class="row gap-3 d-flex justify-content-center mt-5">
-                <h3 class="text-center">EN PROCESO...</h3>
-                <br>
-                <br>
-                <br>
-                <br>
+                <h3 class="text-center">EN PROCESO... ⌛</h3>
                 <br>
                 <br>
                 <br>
@@ -21,6 +17,9 @@
                 <br>
             </div>
         </div>
+            <div class="my-5 d-flex justify-content-center">
+                <a href="?page=home" class="btn btn-danger"> 🡨 </a>
+            </div>
     </main>
 
     <?php
