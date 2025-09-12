@@ -34,6 +34,16 @@
                 </div>
             </div>
 
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">TP 4</h5>
+                        <p>PHP Trabajo Práctico Nro 4</p>
+                        <a href="?page=tp4" class="btn btn-primary">Ver TP</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </main>

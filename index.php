@@ -4,15 +4,15 @@ $page = $_GET['page'] ?? 'home';
 
 switch ($page) {
     case 'tp1':
-        $view = 'views/1';
+        $view = 'views/1/tp1.php';
         break;
 
     case 'tp2':
-        $view = 'views/2';
+        $view = 'views/2/tp2.php';
         break;
     
     case 'tp3':
-        $view = 'views/3';
+        $view = 'views/3/tp3.php';
         break;
     
     default:
