@@ -16,7 +16,7 @@ switch ($page) {
         break;
     
     default:
-        $view = '/index.php';
+        $view = 'views/home.php';
         break;
 }
 ?>
