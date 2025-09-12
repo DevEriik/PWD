@@ -23,6 +23,9 @@
         </form>
     </div>
 </div>
+    <div class="mb-5 d-flex justify-content-center">
+        <a href="?page=tp3" class="btn btn-danger"> < Volver </a>
+    </div>
 
     <script src="../../JS/bootstrap.bundle.min.js"></script>
 </body>

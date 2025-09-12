@@ -1,57 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <form id="loginForm" method="post" action="/tu_script_servidor.php">
-    <p>
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email">
-    </p>
-    <p>
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password">
-    </p>
-    <p>
-        <input type="submit" value="Iniciar Sesión">
-    </p>
-    </form>
-</body>
+<div class="container d-flex justify-content-center align-items-center my-5">
+    <div class="card shadow p-4 w-100" style="max-width: 700px;">
+      <h2 class="text-center mb-4">Formulario con Validación Bootstrap</h2>
 
-<script>
-    $(document).ready(function() {
-  $("#loginForm").validate({
-    rules: {
-      email: {
-        required: true,
-        email: true // La regla 'email' valida el formato del correo
-      },
-      password: {
-        required: true,
-        minlength: 8 // La contraseña debe tener al menos 8 caracteres
-      }
-    },
-    messages: {
-      email: {
-        required: "Por favor, introduce tu correo electrónico.",
-        email: "El formato del correo no es válido."
-      },
-      password: {
-        required: "Por favor, introduce una contraseña.",
-        minlength: "La contraseña debe tener al menos 8 caracteres."
-      }
-    },
-    submitHandler: function(form) {
-      // Esta función se ejecuta si el formulario es válido
-      alert("Formulario validado correctamente. Enviando...");
-      //form.submit();
-    }
-  });
-});
-</script>
-</html>
+      <form method="post" action="Action1.php" class="row g-3 needs-validation" novalidate>
+
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="nombre" required>
+          <div class="invalid-feedback">Debe ingresar un nombre.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" name="apellido" id="apellido" required>
+          <div class="invalid-feedback">Debe ingresar un apellido.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" name="email" id="email" required>
+          <div class="invalid-feedback">Debe ingresar un correo válido.</div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" minlength="6" class="form-control" name="password" id="password" required>
+          <div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres.</div>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="terminos" id="terminos" required>
+            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+            <div class="invalid-feedback">Debe aceptar los términos antes de enviar.</div>
+          </div>
+        </div>
+
+        <div class="col-12 text-center">
+          <button class="btn btn-success" type="submit">Registrar</button>
+        </div>
+      </form>
+        <div class="mt-5">
+            <a href="?page=tp2" class="btn btn-danger"> < Volver </a>
+        </div>
+    </div>
+  </div>

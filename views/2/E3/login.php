@@ -10,17 +10,19 @@
     <title>Login de Usuario</title>
 </head>
 <body>
-    <div class="card shadow-sm login-card">
+    <main class="d-flex align-items-center justify-content-center my-5">
+    <div class="card shadow-sm login-card" style="max-width: 400px;">
         <div class="card-body p-4">
             <h3 class="card-title text-center mb-4">Member Login</h3>
 
             <button type="button" class="btn-close" aria-label="Close" style="position: absolute; top: 10px; right: 10px;"></button>
+
             <form name="login-form" id="login-form" method="POST" action="../../../controllers/2/E3/verificaPass.php">
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
-                    <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Username"required>
+                    <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Username" required>
                     <div class="invalid-feedback">
-                    Por favor, ingrese un nombre de usuario.
+                        Por favor, ingrese un nombre de usuario.
                     </div>
                 </div>
 
@@ -37,7 +39,11 @@
                 </div>
             </form>
         </div>
+</main>
+    <div class="my-5 d-flex justify-content-center">
+        <a href="?page=tp2" class="btn btn-danger"> < Volver </a>
     </div>
+
     <script src="../../JS/bootstrap.bundle.min.js"></script>
 
     <script src="validacion.js"></script>

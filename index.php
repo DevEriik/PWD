@@ -14,6 +14,10 @@ switch ($page) {
     case 'tp3':
         $view = 'views/3/tp3.php';
         break;
+
+    case 'tp4':
+        $view = 'views/4/tp4.php';
+        break;
     
     default:
         $view = 'views/home.php';

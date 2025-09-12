@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="d-flex justify-content-center align-items-center vh-100">
-        <div class=" container">
+        <div class="container">
             <h3>Formulario subida de archivos...</h3>
             <form name="form-subir" id="form-subir" method="POST" action="../../../controllers/3/E1/validarTipoDoc.php" enctype="multipart/form-data">
                 <div class="mb-3 input-file">
@@ -22,6 +22,9 @@
             </form>
         </div>
 </div>
+<div class="mb-5 d-flex justify-content-center">
+        <a href="?page=tp3" class="btn btn-danger"> < Volver </a>
+    </div>
 
 
     <script href="../../JS/bootstrap.bundle.min.js"></script>
