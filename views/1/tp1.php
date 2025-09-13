@@ -50,7 +50,7 @@
             break;
 
         case 'E2':
-            include 'E2/index.html';
+            include 'E2/index.php';
             break;
 
         case 'E3':

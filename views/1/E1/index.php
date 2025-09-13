@@ -37,5 +37,6 @@ $resultado = $_GET['resultado'] ?? null;
         <div class="my-2 d-flex justify-content-center">
             <a href="?page=tp1" class="btn btn-danger"> 🡨 </a>
         </div>
+        <br>
     </div>
 </main>
