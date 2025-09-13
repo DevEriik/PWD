@@ -46,7 +46,7 @@
         
         switch ($ejercicios) {
         case 'E1':
-            include 'E1/index.html';
+            include 'E1/index.php';
             break;
 
         case 'E2':

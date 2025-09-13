@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horas Cursada</title>
-  </head>
-  <body>
-    <div class="conteiner">
-      <form action="../../../controllers/1/E2/verhoras.php" method="get">
+<main class="container">
+    <div class=" my-5 d-flex justify-content-center">
+      <form action="../../action/1/E2/formAction.php" method="POST" novalidate>
         <label for="lunes">Lunes:</label> <br />
         <input type="number" name="lunes" value="0" min="0" /> <br /><br />
 
@@ -23,7 +16,7 @@
         <label for="viernes">Viernes:</label> <br />
         <input type="number" name="viernes" value="0" min="0" /> <br /><br />
 
-        <button type="submit">Calcular Total de Horas</button>
+        <button class="btn btn-primary" type="submit">Calcular Total de Horas</button>
     </div>
-  </body>
-</html>
+  </main>
+
