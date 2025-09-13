@@ -71,6 +71,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             //?Redirigo pasando los valores por URL
             header("Location: ../../?page=tp1&ejercicio=E6&resultado=$resultado");
             break;
+
+        case 'tp1e7':
+            require_once("../../controllers/1/E7/controlCalculadora.php");
+            $control = new controlCalculadora();
+            $operacion = $_GET['operacion'];
+            $num1 = $_GET['valor1'];
+            $num2 = $_GET['valor2'];
+            $resultado = $control->realizarOperacion($num1, $num2, $operacion);
+
+            //?Redirigo pasando los valores por URL 
+            //!ACA ME QUEDE...
+            header("Location: ../../?page=tp1&ejercicio=E7&resultado=$resultado");
+            break;
         
         default:
             # code...
