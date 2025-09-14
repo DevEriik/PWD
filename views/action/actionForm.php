@@ -81,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             $resultado = $control->realizarOperacion($num1, $num2, $operacion);
 
             //?Redirigo pasando los valores por URL 
-            //!ACA ME QUEDE...
             header("Location: ../../?page=tp1&ejercicio=E7&resultado=$resultado");
             break;
         

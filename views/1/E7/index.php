@@ -1,3 +1,8 @@
+<?php
+//?Obtenemos los datos por URL
+$resultado = $_GET['resultado'] ?? null;
+?>
+
 <main class="container my-5 d-flex justify-content-center">
     <div class="card py-5 px-5">
         <form name="form-cal" method="GET"  action="/PWD/views/action/actionForm.php">
@@ -22,5 +27,16 @@
             <input class="btn btn-success" type="submit" value="OPERAR">
             </div>
         </form>
+
+        <?php
+            if ($resultado !== null) { ?>
+                <div class="alert alert-success text-center">
+                    El resultado es: <?php echo htmlspecialchars($resultado) ?>
+            </div> <?php 
+            } ?>
+
+            <div class="my-2 d-flex justify-content-center">
+                <a href="?page=tp1" class="btn btn-danger"> 🡨 </a>
+            </div>
     </div>
 </main>
