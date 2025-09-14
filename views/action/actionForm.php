@@ -83,6 +83,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             //?Redirigo pasando los valores por URL 
             header("Location: ../../?page=tp1&ejercicio=E7&resultado=$resultado");
             break;
+
+        case 'tp1e8':
+            require_once("../../controllers/1/E8/controlEdadEstudio.php");
+            $control = new controlEdadEstudio();
+            $edad = $_GET['edad-est'];
+            $estudio = $_GET['estudiantes'];
+            $resultado = $control->controlarEdadEstudio($edad, $estudio);
+
+            //?Redirigo pasando los valores por URL 
+            header("Location: ../../?page=tp1&ejercicio=E8&edad-est=$edad&estudiantes=$estudio&resultado=$resultado");
+            break;
         
         default:
             # code...
