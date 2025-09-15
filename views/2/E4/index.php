@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../CSS/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../CSS/2/E4/style.css">
-    <title>Empresa Cinem@s</title>
-</head>
-<body>
+<?php
+
+//?Obtenemos los datos por el URL para mostrar al usuario.
+$titulo = $_GET['input-title'];
+$actores = $_GET['input-actores'];
+$director = $_GET['input-director'];
+$guion = $_GET['input-guion'];
+$produccion = $_GET['input-produccion'];
+$anio = $_GET['input-anio'];
+$nacionalidad = $_GET['nacionalidad'];
+$genero = $_GET['genero-select'];
+$duracion = $_GET['input-duracion'];
+$restriccion = $_GET['input-restriccion'];
+
+?>
+
+<main>
     <div class="container my-5">
-        <form id="pelicula-form" method="GET" action="../../../controllers/2/E4/pelicula-intro.php" class="needs-validation" novalidate>
+        <form id="pelicula-form" method="GET" action="/PWD/views/action/actionForm.php" class="needs-validation" novalidate>
+            <input type="hidden" name="accion" value="tp2e4">
             <div class="text-center mb-4">
                 <h3 id="title-cine">Cinem@s</h3>
             </div>
@@ -102,14 +110,29 @@
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
         </form>
-        <div id="resultados-formulario" class="mt-4 p-4 border rounded" style="background-color: #c0f5c596;color: #21b351c5">
             
         </div>
     </div>
+    <?php
+
+    if ($titulo !== null && $actores !== null && $director !== null && $guion !== null && $produccion !== null && $anio !== null && $nacionalidad !== null && $genero !== null && $duracion !== null && $restriccion!== null) {?>
+        <div class="alert alert-success text-center">
+            <h3 class="text-center text-primary">La pelicula introducida es</h3>
+            <p>Titulo:</p>
+            <p>Actores:</p>
+            <p>Director:</p>
+            <p>Guion:</p>
+            <p>Produccion:</p>
+            <p>Anio:</p>
+            <p>Nacionalidad:</p>
+            <p>Genero:</p>
+            <p>Duracion:</p>
+            <p>Restriccion de edad:</p>
+        </div><?php
+    }
+    
+    ?>
     <div class="my-5 d-flex justify-content-center">
         <a href="?page=tp2" class="btn btn-danger"> 🡨 </a>
     </div>
-    <script src="../../JS/bootstrap.bundle.min.js"></script>
-    <script src="../../JS/2/E4/validaciones.js"></script>
-</body>
-</html>
+</main>

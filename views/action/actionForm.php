@@ -113,6 +113,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             }
             
             break;
+
+        case 'tp2e4':
+            $titulo = $_GET['input-title'];
+            $actores = $_GET['input-actores'];
+            $director = $_GET['input-director'];
+            $guion = $_GET['input-guion'];
+            $produccion = $_GET['input-produccion'];
+            $anio = $_GET['input-anio'];
+            $nacionalidad = $_GET['nacionalidad'];
+            $genero = $_GET['genero-select'];
+            $duracion = $_GET['input-duracion'];
+            $restriccion = $_GET['input-restriccion'];
+
+            //?Mandamos datos por URL. 
+            header("Location: ../../?page=tp2&ejercicio=E4&input-title=$titulo&input-actores=$actores&input-director=$director&input-guion=$guion&input-produccion=$produccion&input-anio=$anio&nacionalidad=$nacionalidad&genero-select=$genero&input-duracion=$duracion&input-restriccion=$restriccion");
+            
+            break;
         
         default:
             # code...
