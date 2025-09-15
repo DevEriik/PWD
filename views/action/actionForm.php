@@ -94,6 +94,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             //?Redirigo pasando los valores por URL 
             header("Location: ../../?page=tp1&ejercicio=E8&edad-est=$edad&estudiantes=$estudio&resultado=$resultado");
             break;
+
+        case 'tp2e3':
+            require_once("../../controllers/2/E3/verificaPass.php");
+            $controlPass = new verificaPass();
+            $usuario = $_POST['usuario'];
+            $pass = $_POST['password'];
+            $verificar = $controlPass->verificarUsuario($usuario, $pass);
+            
+            if ($verificar) {
+                
+                //?Si la verificacion es true redireccionamos a la bienvenida. 
+                header("Location: ../../?page=tp2&ejercicio=bienvenida");
+            }else{
+
+                //?Si la verificacion es false alertamos al usuario.
+                header("Location: ../../?page=tp2&ejercicio=E3&Error=Error");
+            }
+            
+            break;
         
         default:
             # code...

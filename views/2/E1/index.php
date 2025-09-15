@@ -2,7 +2,8 @@
     <div class="card shadow p-4 w-100" style="max-width: 700px;">
       <h2 class="text-center mb-4">Formulario con Validación Bootstrap</h2>
 
-      <form method="post" action="Action1.php" class="row g-3 needs-validation" novalidate>
+      <form method="POST" action="/PWD/views/action/actionForm/php" class="row g-3 needs-validation" novalidate>
+        <input type="hidden" name="accion" value="tp2e1">
 
         <div class="col-md-6">
           <label for="nombre" class="form-label">Nombre</label>
@@ -40,7 +41,7 @@
           <button class="btn btn-success" type="submit">Registrar</button>
         </div>
       </form>
-        <div class="mt-5">
+        <div class="mt-5 text-center">
             <a href="?page=tp2" class="btn btn-danger"> 🡨 </a>
         </div>
     </div>

@@ -24,6 +24,8 @@ switch ($page) {
         break;
 }
 ?>
+<!-- Linkeo Font Awesome para iconos de algunos ejercicios  -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
 <body>
     <?php include 'views/structure/navbar.php' ?>

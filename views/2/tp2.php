@@ -41,6 +41,10 @@
         case 'E4':
             include 'E4/index.php';
             break;
+
+        case 'bienvenida':
+            include 'E3/bienvenida.php';
+            break;
         
         default:
             echo "<p>Ejercicio no encontrado.</p>";
