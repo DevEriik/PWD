@@ -130,6 +130,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             header("Location: ../../?page=tp2&ejercicio=E4&input-title=$titulo&input-actores=$actores&input-director=$director&input-guion=$guion&input-produccion=$produccion&input-anio=$anio&nacionalidad=$nacionalidad&genero-select=$genero&input-duracion=$duracion&input-restriccion=$restriccion");
             
             break;
+
+        case 'tp3e1':
+            require_once("../../controllers/3/E1/controlSubirArchivo.php");
+            $archivo = $_FILES['form-subir'];
+            $control = new controlSubirArchivo();
+            $resultado = $control->controlarArchivo($archivo);
+
+            header("Location: ../../?page=tp3&ejercicio=E1&resultado=$resultado");
+
+            break;
         
         default:
             # code...
