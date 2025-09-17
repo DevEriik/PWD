@@ -116,19 +116,21 @@ $restriccion = $_GET['input-restriccion'];
     <?php
 
     if ($titulo !== null && $actores !== null && $director !== null && $guion !== null && $produccion !== null && $anio !== null && $nacionalidad !== null && $genero !== null && $duracion !== null && $restriccion!== null) {?>
-        <div class="alert alert-success text-center">
-            <h3 class="text-center text-primary">La pelicula introducida es</h3>
-            <p>Titulo:</p>
-            <p>Actores:</p>
-            <p>Director:</p>
-            <p>Guion:</p>
-            <p>Produccion:</p>
-            <p>Anio:</p>
-            <p>Nacionalidad:</p>
-            <p>Genero:</p>
-            <p>Duracion:</p>
-            <p>Restriccion de edad:</p>
-        </div><?php
+        
+            <div class="alert alert-success  mx-5">
+                <h3 class="text-center text-primary">La pelicula introducida es</h3>
+                <p class="text-success">Titulo: <span class="text-dark"><?php echo htmlspecialchars($titulo) ?></span> </p>
+                <p class="text-success">Actores: <span class="text-dark"><?php echo htmlspecialchars($actores) ?></span></p>
+                <p class="text-success">Director: <span class="text-dark"><?php echo htmlspecialchars($director) ?></span></p>
+                <p class="text-success">Guion: <span class="text-dark"><?php echo htmlspecialchars($guion) ?></span></p>
+                <p class="text-success">Produccion: <span class="text-dark"><?php echo htmlspecialchars($produccion) ?></span></p>
+                <p class="text-success">Anio: <span class="text-dark"><?php echo htmlspecialchars($anio) ?></span></p>
+                <p class="text-success">Nacionalidad: <span class="text-dark"><?php echo htmlspecialchars($nacionalidad) ?></span></p>
+                <p class="text-success">Genero: <span class="text-dark"><?php echo htmlspecialchars($genero) ?></span></p>
+                <p class="text-success">Duracion: <span class="text-dark"><?php echo htmlspecialchars($duracion) ?></span></p>
+                <p class="text-success">Restriccion de edad: <span class="text-dark"><?php echo htmlspecialchars($restriccion) ?></span></p>
+            </div>
+        <?php
     }
     
     ?>
