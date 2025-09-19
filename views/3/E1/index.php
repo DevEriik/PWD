@@ -1,3 +1,10 @@
+<?php
+
+//?Obtengo datos de la URL
+$resultado = $_GET['resultado'] ?? null;
+
+?>
+
 <main class="container">
     <div class="d-flex justify-content-center align-items-center vh-100">
             <div>
@@ -14,6 +21,17 @@
                 </form>
             </div>
     </div>
+    <?php
+
+    if ($resultado !== null) {?>
+        
+            <div class="alert alert-success  mx-5">
+               <?php echo htmlspecialchars($resultado) ?>
+            </div>
+        <?php
+    }
+    
+    ?>
     <div class="mb-5 d-flex justify-content-center">
         <a href="?page=tp3" class="btn btn-danger"> 🡨 </a>
     </div>

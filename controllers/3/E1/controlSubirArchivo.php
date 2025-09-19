@@ -3,8 +3,9 @@
 class controlSubirArchivo{
 
     public function controlarArchivo($archivo){ 
+        
 
-        $rutaTemporal = $_FILES['tmp_name'];
+        $rutaTemporal = $archivo['tmp_name'];
 
         //? Definimos tipo de MIME permitidos. 
         $tiposPermitidos = [
@@ -19,16 +20,22 @@ class controlSubirArchivo{
 
         $esTamanioValido = ($archivo['size'] <= $tamanoMaximo);
 
-        $resultado = false;
-
+        
+        $resultado = "No entro al IF";
         //?Si ambos son validos
         if ($esTipoValido && $esTamanioValido) {
+
+            $nombreArchivo = basename($archivo['name']);
             
-            $rutaDestino = "/PWD/assets/uploads" . basename($archivo['name']);
+            $rutaDestino = __DIR__ . "/../../../assets/uploads/" . $nombreArchivo;
+
+            $resultado = "Entro al IF";
 
             if (move_uploaded_file($rutaTemporal, $rutaDestino)) {
                 
-                $resultado = true;
+                $resultado = "Entro al 2do IF";
+            }else{
+                $resultado = "Error al subir archivo.";
             }
         }
 
