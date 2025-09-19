@@ -145,6 +145,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             }
 
             break;
+
+        case 'tp3e2':
+            require_once("../../controllers/3/E2/controlTXT.php");
+            $archivo = $_FILES['input-txt'];
+            $control = new controlTXT();
+            $resultado = $control->controlarArchivoTXT($archivo);
+
+
+            header("Location: ../../?page=tp3&ejercicio=E2&resultado=$resultado");
+                
+            break;
+
+        case 'tp3e3':
+            require_once("../../controllers/3/E3/controlCine.php");
+            $archivo = $_FILES['input-file'];
+            $control = new controlCine();
+            $img = $control->controlarImg($archivo);
+
+            $titulo = $_POST['input-title'];
+            $actores = $_POST['input-actores'];
+            $director = $_POST['input-director'];
+            $guion = $_POST['input-guion'];
+            $produccion = $_POST['input-produccion'];
+            $anio = $_POST['input-anio'];
+            $nacionalidad = $_POST['nacionalidad'];
+            $genero = $_POST['genero-select'];
+            $duracion = $_POST['input-duracion'];
+            $restriccion = $_POST['input-restriccion'];
+
+            if ($img == "Error.") {
+                header("Location: ../../?page=tp3&ejercicio=E3&resultado=$img");
+            }else{
+                header("Location: ../../?page=tp3&ejercicio=E3&input-title=$titulo&input-actores=$actores&input-director=$director&input-guion=$guion&input-produccion=$produccion&input-anio=$anio&nacionalidad=$nacionalidad&genero-select=$genero&input-duracion=$duracion&input-restriccion=$restriccion&resultado=$img");
+            }
+
+                
+            break;
         
         default:
             # code...

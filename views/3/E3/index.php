@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../CSS/bootstrap.min.css" rel="stylesheet">
-    <title>Empresa Cinem@s</title>
-</head>
-<body>
+<?php
+
+//?Obtenemos los datos por el URL para mostrar al usuario.
+$titulo = $_GET['input-title'];
+$actores = $_GET['input-actores'];
+$director = $_GET['input-director'];
+$guion = $_GET['input-guion'];
+$produccion = $_GET['input-produccion'];
+$anio = $_GET['input-anio'];
+$nacionalidad = $_GET['nacionalidad'];
+$genero = $_GET['genero-select'];
+$duracion = $_GET['input-duracion'];
+$restriccion = $_GET['input-restriccion'];
+$img = $_GET['resultado'];
+?>
+
+
     <div class="container my-5">
-        <form id="pelicula-form" method="POST" action="../../../controllers/3/E3/pelicula-intro.php" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <form id="pelicula-form" method="POST" action="/PWD/views/action/actionForm.php" class="needs-validation" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="accion" value="tp3e3">
             <div class="text-center mb-4">
                 <h3 id="title-cine">Cinem@s</h3>
             </div>
@@ -107,18 +116,35 @@
                 </div>
             </div>
             <div class="d-flex justify-content-end mt-3">
-                <button type="reset" class="btn btn-secondary me-2">Borrar</button>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary me-2">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Borrar</button>
             </div>
         </form>
-        <div id="resultados-formulario" class="mt-4 p-4 border rounded" style="background-color: #c0f5c596;color: #21b351c5">
-            
-        </div>
     </div>
+    <?php
+
+    if ($titulo !== null && $actores !== null && $director !== null && $guion !== null && $produccion !== null && $anio !== null && $nacionalidad !== null && $genero !== null && $duracion !== null && $restriccion!== null) {?>
+        
+            <div class="alert alert-success  mx-5">
+                <h3 class="text-center text-primary">La pelicula introducida es</h3>
+                <p class="text-success">Titulo: <span class="text-dark"><?php echo htmlspecialchars($titulo) ?></span> </p>
+                <p class="text-success">Actores: <span class="text-dark"><?php echo htmlspecialchars($actores) ?></span></p>
+                <p class="text-success">Director: <span class="text-dark"><?php echo htmlspecialchars($director) ?></span></p>
+                <p class="text-success">Guion: <span class="text-dark"><?php echo htmlspecialchars($guion) ?></span></p>
+                <p class="text-success">Produccion: <span class="text-dark"><?php echo htmlspecialchars($produccion) ?></span></p>
+                <p class="text-success">Anio: <span class="text-dark"><?php echo htmlspecialchars($anio) ?></span></p>
+                <p class="text-success">Nacionalidad: <span class="text-dark"><?php echo htmlspecialchars($nacionalidad) ?></span></p>
+                <p class="text-success">Genero: <span class="text-dark"><?php echo htmlspecialchars($genero) ?></span></p>
+                <p class="text-success">Duracion: <span class="text-dark"><?php echo htmlspecialchars($duracion) ?></span></p>
+                <p class="text-success">Restriccion de edad: <span class="text-dark"><?php echo htmlspecialchars($restriccion) ?></span></p>
+                <img src="/PWD/assets/img/<?php echo htmlspecialchars($img); ?>" alt="Imagen" width="300" 
+     height="450" 
+     class="img-fluid">
+            </div>
+        <?php
+    }
+    
+    ?>
     <div class="mb-5 d-flex justify-content-center">
-        <a href="?page=tp3" class="btn btn-danger"> < Volver </a>
+        <a href="?page=tp3" class="btn btn-danger"> 🡨 </a>
     </div>
-    <script src="../../JS/bootstrap.bundle.min.js"></script>
-    <script src="../../JS/3/E3/validaciones.js"></script>
-</body>
-</html>
