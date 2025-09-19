@@ -1,6 +1,6 @@
 <?php
 
-class controlSubirArchivo{
+class controlSubirArchivo {
 
     public function controlarArchivo($archivo){ 
         
@@ -20,26 +20,26 @@ class controlSubirArchivo{
 
         $esTamanioValido = ($archivo['size'] <= $tamanoMaximo);
 
-        
-        $resultado = "No entro al IF";
-        //?Si ambos son validos
+        $resultado = false;
+
+        //? Si ambos son validos
         if ($esTipoValido && $esTamanioValido) {
 
             $nombreArchivo = basename($archivo['name']);
             
             $rutaDestino = __DIR__ . "/../../../assets/uploads/" . $nombreArchivo;
 
-            $resultado = "Entro al IF";
-
             if (move_uploaded_file($rutaTemporal, $rutaDestino)) {
-                
-                $resultado = "Entro al 2do IF";
-            }else{
-                $resultado = "Error al subir archivo.";
+                $resultado = true;
+                $enlace = $rutaDestino;
             }
         }
 
-        return $resultado;
-
+        if (!$resultado) {
+            return $alert;
+        }else{
+            return $enlace;
+        }
+        
     }
 }

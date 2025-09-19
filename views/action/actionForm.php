@@ -134,10 +134,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
         case 'tp3e1':
             require_once("../../controllers/3/E1/controlSubirArchivo.php");
             $archivo = $_FILES['form-subir'];
+            $nombreArchivo = $_FILES['form-subir']['name'];
             $control = new controlSubirArchivo();
             $resultado = $control->controlarArchivo($archivo);
 
-            header("Location: ../../?page=tp3&ejercicio=E1&resultado=$resultado");
+            if (!$resultado) {
+                header("Location: ../../?page=tp3&ejercicio=E1&resultado=$resultado");
+            }else{
+                header("Location: ../../?page=tp3&ejercicio=E1&enlace=$resultado&nombre=$nombreArchivo");
+            }
 
             break;
         
