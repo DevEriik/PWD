@@ -111,6 +111,92 @@ class Persona{
         }
         return $resp;
     }
+
+     //! ******** INSERTAR ******** 
+    /**
+	 * Inserta una nueva persona a la coleccion de personas.
+	 * Retorna true si pudo insertarlo y false en caso contrario.
+	 * @return BOOLEAN $resp 
+	 */		
+    public function insertar()
+    {
+        //Inicializo variables
+        $base = new BaseDatos();
+        $resp = false;
+        $consultaInsertar = "INSERT INTO persona(NroDni, Apellido, Nombre, fechaNac, Telefono, Domicilio)
+				VALUES ('" . $this->getNroDni() . "','" . $this->getApellido() . "','" . $this->getNombre() . "','" . $this->getFechaNac() . "','" . $this->getTelefono() . "','" . $this->getDomicilio() . "')";
+        //Si se conecta a la base de datos
+        if ($base->Iniciar()) {
+
+            if ($id = $base->devuelveIDInsercion($consultaInsertar)) {
+                $this->setIdPersona($id);
+                $resp = true;
+            } else {
+                $this->setmensajeOperacion($base->getError());
+            }
+        } else { //Si no se conecta a la base de datos
+            $this->setmensajeOperacion($base->getError());
+        }
+        return $resp;
+    }
+
+     //! ******** MODIFICAR ******** 
+    /**
+	 * Modifica una persona de la coleccion de personas.
+	 * Retorna true si pudo modificarla y false en caso contrario.
+	 * @return BOOLEAN $resp 
+	 */		
+    public function modificar()
+    {
+        $resp = false;
+        $base = new BaseDatos();
+        $consultaModifica = "UPDATE persona SET NroDni='" . $this->getNroDni() . "', Apellido='" . $this->getApellido() . "', Nombre='" . $this->getNombre() . "',fechaNac='" . $this->getFechaNac() . "' ,Telefono='" . $this->getTelefono() . "',Domicilio='" . $this->getDomicilio() . "' WHERE NroDni = " . $this->getNroDni();
+        // echo $consultaModifica . "\n";
+        if ($base->Iniciar()) {
+
+            //Verifico si existe la persona que deseo modificar
+            if($this->Buscar($this->getIdPersona())){
+
+                if ($base->Ejecutar($consultaModifica)) {
+                    $resp = true;
+                } else { //Si no se ejecuta la consulta 
+                    $this->setmensajeOperacion($base->getError());
+                }
+            }else{ //Si la persona buscada no existe
+                $this->setMensajeOperacion($base->getError());
+            }
+        } else { //Si no se conecta a la base de datos
+            $this->setmensajeOperacion($base->getError());
+        }
+        return $resp;
+    }
+
+    //! ******** ELIMINAR ******** 
+    /**
+	 * Elimina una persona a la coleccion de personas.
+	 * Retorna true si pudo eliminarlo y false en caso contrario.
+	 * @return BOOLEAN $resp 
+	 */		
+    public function eliminar()
+    {
+        $base = new BaseDatos();
+        $resp = false;
+
+        //Si se conecta a la base de datos
+        if ($base->Iniciar()){
+            $consultaBorra = "DELETE FROM persona WHERE NroDni=" . $this->getNroDni();
+
+            //Si se ejecuta la consulta
+            if ($base->Ejecutar($consultaBorra)){
+                $resp = true;
+            } else { //Si no se ejecuta la consulta 
+                $this->setmensajeOperacion($base->getError());
+            }
+        } else { //Si no se conecta a la base de datos
+            $this->setmensajeOperacion($base->getError());
+        }
+        return $resp;
+    }
 }
 
 
