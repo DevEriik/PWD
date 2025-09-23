@@ -1,5 +1,8 @@
 <?php
 
+
+require_once __DIR__ . '/../../../models/BaseDatos.php';
+
 class Persona{
     
     //! ******** ATRIBUTOS ******** 
@@ -97,9 +100,9 @@ class Persona{
                 if ($row2 = $base->Registro()) {
                     $this->setNroDni($nroDni);
                     $this->setApellido($row2['Apellido']);
-                    $this->setNombre($row2['nombre']);
+                    $this->setNombre($row2['Nombre']);
                     $this->setFechaNac($row2['fechaNac']);
-                    $this->setTelefono($row2['telefono']);
+                    $this->setTelefono($row2['Telefono']);
                     $this->setDomicilio($row2['Domicilio']);
                     $resp = true;
                 }
