@@ -4,7 +4,7 @@ include_once __DIR__. "/../../models/4/persona.php";
 class PersonaControl {
 
     public function listarPersonas() {
-        $a = new Persona("","","","");
+        $a = new Persona("","","","","","");
         $lis = $a->listarPersona();
         return $lis;
     }

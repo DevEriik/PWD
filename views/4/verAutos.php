@@ -1,10 +1,10 @@
-<?php
-include_once __DIR__ . '/../../controllers/4/auto.php';
+<?php 
+include_once __DIR__ . '/../../controllers/4/auto.php'; 
 include_once __DIR__ . '/../../controllers/4/persona.php'; 
-$autoCtrl = new AutoControl();
-$personaCtrl = new PersonaControl();
 
-$autos = $autoCtrl->listarAutos();
+$autoCtrl = new AutoControl(); 
+$personaCtrl = new PersonaControl(); 
+$autos = $autoCtrl->listarAutos(); 
 ?>
 
 <!DOCTYPE html>
@@ -18,28 +18,32 @@ $autos = $autoCtrl->listarAutos();
 <body>
     <h1>Listado de Autos</h1>
 
-    <?php if (count($autos) > 0): ?>
-        <table>
+    <?php 
+    if(count($autos) > 0){
+        echo "<table>
             <tr>
                 <th>Patente</th>
                 <th>Marca</th>
                 <th>Modelo</th>
                 <th>Dueño</th>
-            </tr>
-            <?php foreach ($autos as $auto): 
-                $dueño = $personaCtrl->buscarPersona($auto->getDniDuenio());
-                $nombreDueño = $dueño ? $dueño->getNombre() . " " . $dueño->getApellido() : "Desconocido";
-            ?>
-            <tr>
-                <td><?php echo $auto->getPatente(); ?></td>
-                <td><?php echo $auto->getMarca(); ?></td>
-                <td><?php echo $auto->getModelo(); ?></td>
-                <td><?php echo $nombreDueño; ?></td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-    <?php else: ?>
-        <p style="text-align:center; color:red;">No hay autos cargados en la base de datos.</p>
-    <?php endif; ?>
+            </tr>";
+        
+        foreach ($autos as $a){
+            $duenio = $personaCtrl->buscarPersona($a["DniDuenio"]); // devuelve objeto Persona o null
+            $nombreDuenio = $duenio ? $duenio->getApellido() . " " . $duenio->getNombre() : "Desconocido";
+            
+            echo "<tr>
+                <td>".$a["Patente"]."</td>
+                <td>".$a["Marca"]."</td>
+                <td>".$a["Modelo"]."</td>
+                <td>".$nombreDuenio."</td>
+            </tr>";
+        }
+
+        echo "</table>";
+    } else {
+        echo "<p style='text-align:center; color:red;'>No hay autos cargados en la base de datos.</p>";
+    }
+    ?>
 </body>
 </html>
