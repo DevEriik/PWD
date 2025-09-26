@@ -5,7 +5,6 @@
     <title>Buscar Auto</title>
     <link rel="stylesheet" href="../CSS/4/4/estilos.css">
     <script src="../JS/4/validaciones.js"></script>
-</head>
     <script>
         function validarFormulario() {
             var patente = document.getElementById("patente").value;
@@ -17,6 +16,7 @@
         }
     </script>
 </head>
+    
 <body>
     <h1>Buscar Auto por Patente</h1>
 <form action="/PWD/views/action/actionForm.php" method="POST" onsubmit="return validarBuscarAuto();">

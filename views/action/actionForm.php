@@ -206,6 +206,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
                     $resultado = "No se encontró ningún auto con esa patente.";
                 }
             }
+            header("Location: ../../?page=tp4&ejercicio=E4&resultado=$resultado");
             break;
 
         case "registrarPersona":
