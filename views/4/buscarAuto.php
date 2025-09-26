@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Buscar Auto</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <script src="js/validaciones.js"></script>
+    <link rel="stylesheet" href="../CSS/4/4/estilos.css">
+    <script src="../JS/4/validaciones.js"></script>
 </head>
     <script>
         function validarFormulario() {
@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Buscar Auto por Patente</h1>
-<form action="/PWD/views/action/actionForm" method="POST" onsubmit="return validarBuscarAuto();">
+<form action="/PWD/views/action/actionForm.php" method="POST" onsubmit="return validarBuscarAuto();">
     <input type="hidden" name="accion" value="buscarAuto">
     <label for="patente">Patente:</label>
     <input type="text" id="patente" name="patente" maxlength="10">

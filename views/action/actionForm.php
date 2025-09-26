@@ -1,4 +1,5 @@
 <?php 
+
 include_once ("../../controllers/4/auto.php");
 include_once ("../../controllers/4/persona.php");
 
@@ -190,10 +191,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
 
          
         case "buscarAuto":
+            
             $patente = trim($_POST['patente'] ?? "");
             if ($patente === "") {
                 $resultado = "No se ingresó ninguna patente.";
-                echo "3";
             } else {
                 $auto = $objAuto->buscarAuto($patente);
                 if ($auto) {
