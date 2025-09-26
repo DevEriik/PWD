@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Buscar Auto</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <script src="../JS/4/validaciones.js"></script>
+    <script src="js/validaciones.js"></script>
 </head>
     <script>
         function validarFormulario() {
@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Buscar Auto por Patente</h1>
-<form action="../action/actionForm.php" method="post" onsubmit="return validarBuscarAuto();">
+<form action="./Accion/formAccion.php" method="post" onsubmit="return validarBuscarAuto();">
     <input type="hidden" name="accion" value="buscarAuto">
     <label for="patente">Patente:</label>
     <input type="text" id="patente" name="patente" maxlength="10">

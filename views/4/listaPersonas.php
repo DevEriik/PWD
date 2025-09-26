@@ -1,6 +1,6 @@
 <?php
-include_once("/../../Control/auto.php");
-include_once("/../../Control/persona.php");    
+include_once("../Control/auto.php");
+include_once("../Control/persona.php");    
 
 $personaCtrl = new PersonaControl();
 $autosCtrl = new AutoControl();

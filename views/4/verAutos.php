@@ -1,8 +1,25 @@
-<main>
-    <script src="../JS/4/validaciones.js"></script>
+<?php
+include_once('../../Control/auto.php');
+include_once('../../Control/persona.php');   
+
+$autoCtrl = new autoControl();
+$personaCtrl = new personaControl();
+
+$autos = $autoCtrl->listarAutos();
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Autos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="js/validaciones.js"></script>
+</head>
+<body>
     <h1>Listado de Autos</h1>
 
-    <?php if (isset($listaAutos) && count($listaAutos) > 0): ?>
+    <?php if (count($autos) > 0): ?>
         <table>
             <tr>
                 <th>Patente</th>
@@ -10,16 +27,20 @@
                 <th>Modelo</th>
                 <th>Dueño</th>
             </tr>
-            <?php foreach ($listaAutos as $auto): ?>
+            <?php foreach ($autos as $auto): 
+                $dueño = $personaCtrl->buscarPersona($auto->getDniDuenio());
+                $nombreDueño = $dueño ? $dueño->getNombre() . " " . $dueño->getApellido() : "Desconocido";
+            ?>
             <tr>
-                <td><?php echo $auto['patente']; ?></td>
-                <td><?php echo $auto['marca']; ?></td>
-                <td><?php echo $auto['modelo']; ?></td>
-                <td><?php echo $auto['dueño']; ?></td>
+                <td><?php echo $auto->getPatente(); ?></td>
+                <td><?php echo $auto->getMarca(); ?></td>
+                <td><?php echo $auto->getModelo(); ?></td>
+                <td><?php echo $nombreDueño; ?></td>
             </tr>
             <?php endforeach; ?>
         </table>
     <?php else: ?>
         <p style="text-align:center; color:red;">No hay autos cargados en la base de datos.</p>
     <?php endif; ?>
-</main>
+</body>
+</html>

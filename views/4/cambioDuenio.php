@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Cambiar Dueño de Auto</title>
     <link rel="stylesheet" href="../css/estilos.css">
-    <script src="../JS/4/validaciones.js"></script>
+    <script src="js/validaciones.js"></script>
     <script>
         function validarFormulario() {
             let patente = document.getElementById("patente").value.trim();
@@ -23,7 +23,7 @@
 </head>
 <body>
     <h1>Cambiar Dueño de Auto</h1>
-<form action="../action/actionForm.php" method="post" onsubmit="return validarCambioDuenio();">
+<form action="formAccion.php" method="post" onsubmit="return validarCambioDuenio();">
     <input type="hidden" name="accion" value="cambiarDuenio">
 
     <label for="patente">Patente del Auto:</label>

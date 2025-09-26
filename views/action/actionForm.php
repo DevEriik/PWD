@@ -1,6 +1,11 @@
 <?php 
+include_once ("../../controllers/4/auto.php");
+include_once ("../../controllers/4/persona.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET') {
+
+    $objAuto = new AutoControl();
+    $objPersona = new PersonaControl();
     
     $accion = $_POST['accion'] ?? $_GET['accion'];
 
@@ -183,7 +188,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
                 
             break;
 
-         case "cambiarDuenio":
+         
+        case "buscarAuto":
+            echo "1";
+            $patente = trim($_POST['patente'] ?? "");
+            echo "2";
+            if ($patente === "") {
+                $resultado = "No se ingresó ninguna patente.";
+                echo "3";
+            } else {
+                echo "4";
+                $auto = $objAuto->buscarAuto($patente);
+                if ($auto) {
+                    $dueño = $objPersona->buscarPersona($auto->getDniDuenio());
+                    $resultado = "Auto: {$auto->getPatente()} - {$auto->getMarca()} {$auto->getModelo()}<br>Dueño: " .
+                                ($dueño ? $dueño->getNombre() . " " . $dueño->getApellido() : "Desconocido");
+                    $exito = true;
+                } else {
+                    $resultado = "No se encontró ningún auto con esa patente.";
+                }
+            }
+            break;
+
+        case "registrarPersona":
+            $nroDni = trim($_POST['nroDni'] ?? "");
+            $apellido = trim($_POST['apellido'] ?? "");
+            $nombre = trim($_POST['nombre'] ?? "");
+            $fechaNac = trim($_POST['fechaNac'] ?? "");
+            $telefono = trim($_POST['telefono'] ?? "");
+            $domicilio = trim($_POST['domicilio'] ?? "");
+            if ($nroDni && $apellido && $nombre && $fechaNac && $telefono && $domicilio) {
+                $exito = $objPersona->agregarPersona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio);
+                $resultado = $exito ? "Persona registrada correctamente." : "No se pudo registrar la persona.";
+            } else {
+                $resultado = "Todos los campos son obligatorios.";
+            }
+            break;
+
+        case "registrarAuto":
+            $patente = trim($_POST['patente'] ?? "");
+            $marca = trim($_POST['marca'] ?? "");
+            $modelo = trim($_POST['modelo'] ?? "");
+            $dniDuenio = trim($_POST['dniDuenio'] ?? "");
+            if ($patente && $marca && $modelo && $dniDuenio) {
+                $dueño = $objPersona->buscarPersona($dniDuenio);
+                if ($dueño) {
+                    $exito = $objAuto->agregarAuto($patente, $marca, $modelo, $dniDuenio);
+                    $resultado = $exito ? "Auto registrado correctamente." : "No se pudo registrar el auto (patente repetida).";
+                } else {
+                    $resultado = "El dueño no existe. Registre primero a la persona.";
+                }
+            } else {
+                $resultado = "Todos los campos son obligatorios.";
+            }
+            break;
+
+        case "cambiarDuenio":
             $patente = trim($_POST['patente'] ?? "");
             $dniNuevo = trim($_POST['dniDuenio'] ?? "");
             if ($patente && $dniNuevo) {
@@ -198,7 +258,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             } else {
                 $resultado = "Todos los campos son obligatorios.";
             }
-        break;
+            break;
+
+        case "actualizarPersona":
+            $nroDni = trim($_POST['nroDni'] ?? "");
+            $apellido = trim($_POST['apellido'] ?? "");
+            $nombre = trim($_POST['nombre'] ?? "");
+            $fechaNac = trim($_POST['fechaNac'] ?? "");
+            $telefono = trim($_POST['telefono'] ?? "");
+            $domicilio = trim($_POST['domicilio'] ?? "");
+            if ($nroDni && $apellido && $nombre && $fechaNac && $telefono && $domicilio) {
+                $exito = $objPersona->actualizarPersona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio);
+                $resultado = $exito ? "Datos actualizados correctamente." : "No se pudo actualizar la persona.";
+            } else {
+                $resultado = "Todos los campos son obligatorios.";
+            }
+            break;
 
         
         default:

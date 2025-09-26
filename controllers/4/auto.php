@@ -1,5 +1,6 @@
 <?php
-include_once("../../models/4/auto.php");
+include_once("../Modelo/auto.php");
+
 class AutoControl {
 
     public function listarAutos() {
