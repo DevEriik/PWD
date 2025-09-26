@@ -1,6 +1,5 @@
 <?php
-include_once("../baseDatos.php");
-
+include_once __DIR__."/../baseDatos.php";
 class Persona {
     private $nroDni;
     private $apellido;

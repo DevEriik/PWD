@@ -1,10 +1,12 @@
 <?php
-include_once("../../models/4/auto.php");
+include_once __DIR__. "/../../models/4/auto.php";
 
 class AutoControl {
 
     public function listarAutos() {
-        return Auto::seleccionar();
+        $a = new Auto("","","","");
+        $lis = $a->listarAuto();
+        return $lis;
     }
 
     public function buscarAuto($patente) {

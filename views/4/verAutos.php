@@ -1,9 +1,8 @@
 <?php
-include_once('../../controllers/4/auto.php');
-include_once('../../controllers/4/persona.php');   
-
-$autoCtrl = new autoControl();
-$personaCtrl = new personaControl();
+include_once __DIR__ . '/../../controllers/4/auto.php';
+include_once __DIR__ . '/../../controllers/4/persona.php'; 
+$autoCtrl = new AutoControl();
+$personaCtrl = new PersonaControl();
 
 $autos = $autoCtrl->listarAutos();
 ?>

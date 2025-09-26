@@ -1,5 +1,5 @@
 <?php
-include_once("../baseDatos.php");
+include_once __DIR__."/../baseDatos.php";
 
 
 class Auto {
@@ -71,5 +71,16 @@ class Auto {
         }
         $db->cerrar();
         return $col;
+    }
+    public function listarAuto(){
+        $db = new baseDatos();
+        $sql = "SELECT * FROM auto";
+        $resp = $db->ejecutarConsulta($sql);
+        $autos = []; // Array para guardar los resultados
+        while ($row = $resp->fetch_assoc()) {
+            $autos[] = $row;
+        }
+
+        return $autos;
     }
 }

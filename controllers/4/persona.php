@@ -1,5 +1,5 @@
 <?php
-include_once("../../models/4/persona.php");
+include_once __DIR__. "/../../models/4/persona.php";
 
 class PersonaControl {
 
