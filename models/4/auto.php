@@ -43,8 +43,9 @@ class Auto {
                 Modelo='$this->modelo',
                 DniDuenio='$this->dniDuenio'
                 WHERE Patente='$this->patente'";
-        $db->ejecutar($sql);
+        $rep = $db->ejecutar($sql);
         $db->cerrar();
+        return $rep;
     }
 
     public function eliminar() {

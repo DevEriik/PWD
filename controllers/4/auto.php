@@ -21,12 +21,17 @@ class AutoControl {
 
     public function modificarAuto($patente, $marca, $modelo, $dniDuenio) {
         $a = new Auto($patente, $marca, $modelo, $dniDuenio);
-        $a->modificar();
+        return $a->modificar();
     }
 
     public function eliminarAuto($patente) {
         $a = new Auto();
         $a->setPatente($patente);
         $a->eliminar();
+    }
+    public function cambiarDuenio($patente, $dniNuevo){
+        $aut = $this->buscarAuto($patente);
+        $resp = $this->modificarAuto($aut->getPatente(),$aut->getMarca(),$aut->getModelo(),$dniNuevo);
+        return $resp;
     }
 }
