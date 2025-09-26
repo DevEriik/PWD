@@ -190,14 +190,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
 
          
         case "buscarAuto":
-            echo "1";
             $patente = trim($_POST['patente'] ?? "");
-            echo "2";
             if ($patente === "") {
                 $resultado = "No se ingresó ninguna patente.";
                 echo "3";
             } else {
-                echo "4";
                 $auto = $objAuto->buscarAuto($patente);
                 if ($auto) {
                     $dueño = $objPersona->buscarPersona($auto->getDniDuenio());

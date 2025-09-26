@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Buscar Auto por Patente</h1>
-<form action="./Accion/formAccion.php" method="post" onsubmit="return validarBuscarAuto();">
+<form action="/PWD/views/action/actionForm" method="POST" onsubmit="return validarBuscarAuto();">
     <input type="hidden" name="accion" value="buscarAuto">
     <label for="patente">Patente:</label>
     <input type="text" id="patente" name="patente" maxlength="10">
