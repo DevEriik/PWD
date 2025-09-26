@@ -63,6 +63,18 @@ class Persona {
         $db->cerrar();
     }
 
+    public function listarPersona(){
+        $db = new baseDatos();
+        $sql = "SELECT * FROM persona";
+        $resp = $db->ejecutarConsulta($sql);
+        $personas = []; // Array para guardar los resultados
+        while ($row = $resp->fetch_assoc()) {
+            $personas[] = $row;
+        }
+
+        return $personas;
+    }
+
     public static function seleccionar($dni="") {
         $db = new baseDatos();
         $sql = "SELECT * FROM persona";

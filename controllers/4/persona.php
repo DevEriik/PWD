@@ -4,7 +4,9 @@ include_once __DIR__. "/../../models/4/persona.php";
 class PersonaControl {
 
     public function listarPersonas() {
-        return Persona::seleccionar();
+        $a = new Persona("","","","");
+        $lis = $a->listarPersona();
+        return $lis;
     }
 
     public function buscarPersona($dni) {
