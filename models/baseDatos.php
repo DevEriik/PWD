@@ -1,5 +1,5 @@
 <?php
-class baseDatos {
+class baseDatos{
     private $host = "localhost";
     private $user = "root";   
     private $pass = "";

@@ -1,22 +1,16 @@
+
 <?php
-include_once("../Control/auto.php");
-include_once("../Control/persona.php");    
+include_once("../../controllers/4/persona.php"); 
+include_once("../../controllers/4/auto.php");
+   
 
 $personaCtrl = new PersonaControl();
+
 $autosCtrl = new AutoControl();
 
 $personas = $personaCtrl->listarPersonas(); 
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Lista de Personas</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <script src="js/validaciones.js"></script>
-</head>
-<body>
+<main>
     <h1>Lista de Personas</h1>
 
     <?php if(count($personas) > 0): ?>
@@ -41,5 +35,6 @@ $personas = $personaCtrl->listarPersonas();
     <?php else: ?>
         <p style="text-align:center; color:red;">No hay personas cargadas en la base de datos.</p>
     <?php endif; ?>
-</body>
-</html>
+    <link rel="stylesheet" href="../CSS/4/4/estilos.css">
+    <script src="../JS/4/validaciones.js"></script>
+</main>
