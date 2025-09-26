@@ -182,6 +182,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
 
                 
             break;
+
+         case "cambiarDuenio":
+            $patente = trim($_POST['patente'] ?? "");
+            $dniNuevo = trim($_POST['dniDuenio'] ?? "");
+            if ($patente && $dniNuevo) {
+                $auto = $objAuto->buscarAuto($patente);
+                $persona = $objPersona->buscarPersona($dniNuevo);
+                if ($auto && $persona) {
+                    $exito = $objAuto->cambiarDuenio($patente, $dniNuevo);
+                    $resultado = $exito ? "Dueño cambiado correctamente." : "No se pudo cambiar el dueño.";
+                } else {
+                    $resultado = "Auto o persona no encontrados.";
+                }
+            } else {
+                $resultado = "Todos los campos son obligatorios.";
+            }
+        break;
+
         
         default:
             # code...
