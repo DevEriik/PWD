@@ -1,6 +1,6 @@
 <?php
-include_once('../../Control/auto.php');
-include_once('../../Control/persona.php');   
+include_once('../../controllers/4/auto.php');
+include_once('../../controllers/4/persona.php');   
 
 $autoCtrl = new autoControl();
 $personaCtrl = new personaControl();
@@ -13,8 +13,8 @@ $autos = $autoCtrl->listarAutos();
 <head>
     <meta charset="UTF-8">
     <title>Ver Autos</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <script src="js/validaciones.js"></script>
+    <link rel="stylesheet" href="../CSS/4/4/estilos.css">
+    <script src="../JS/4/validaciones.js"></script>
 </head>
 <body>
     <h1>Listado de Autos</h1>

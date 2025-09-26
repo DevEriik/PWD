@@ -1,5 +1,5 @@
 <?php
-include_once("../Modelo/auto.php");
+include_once("../../models/4/auto.php");
 
 class AutoControl {
 
