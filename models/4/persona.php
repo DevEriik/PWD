@@ -37,10 +37,15 @@ class Persona {
 
     public function insertar() {
         $db = new baseDatos();
+        $resp = false;
         $sql = "INSERT INTO persona (NroDni, Apellido, Nombre, fechaNac, Telefono, Domicilio)
                 VALUES ('$this->nroDni','$this->apellido','$this->nombre','$this->fechaNac','$this->telefono','$this->domicilio')";
-        $db->ejecutar($sql);
+        $resultado = $db->ejecutar($sql);
+        if($resultado){
+            $resp = true;
+        }
         $db->cerrar();
+        return $resp;
     }
 
     public function modificar() {

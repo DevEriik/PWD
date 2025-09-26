@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
     $objPersona = new PersonaControl();
     
     $accion = $_POST['accion'] ?? $_GET['accion'];
-
+    $resultado = null;
     switch ($accion) {
         case 'tp1e1':
             require_once("../../controllers/1/E1/controlNum.php");
@@ -209,7 +209,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             header("Location: ../../?page=tp4&ejercicio=E4&resultado=$resultado");
             break;
 
-        case "registrarPersona":
+        case "nuevaPersona":
             $nroDni = trim($_POST['nroDni'] ?? "");
             $apellido = trim($_POST['apellido'] ?? "");
             $nombre = trim($_POST['nombre'] ?? "");
@@ -224,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
             }
             break;
 
-        case "registrarAuto":
+        case "nuevoAuto":
             $patente = trim($_POST['patente'] ?? "");
             $marca = trim($_POST['marca'] ?? "");
             $modelo = trim($_POST['modelo'] ?? "");
@@ -283,3 +283,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
 
 
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Resultado de la operación</h1>
+    <p class="<?php echo $exito ? 'success' : 'error'; ?>">
+        <?php echo $resultado; ?>
+    </p>
+</body>
+</html>

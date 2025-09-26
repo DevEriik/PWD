@@ -31,8 +31,9 @@ class Auto {
         $db = new baseDatos();
         $sql = "INSERT INTO auto (Patente, Marca, Modelo, DniDuenio)
                 VALUES ('$this->patente','$this->marca','$this->modelo','$this->dniDuenio')";
-        $db->ejecutar($sql);
+        $resp = $db->ejecutar($sql);
         $db->cerrar();
+        return  $resp;
     }
 
     public function modificar() {

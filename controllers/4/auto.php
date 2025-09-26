@@ -16,7 +16,7 @@ class AutoControl {
 
     public function agregarAuto($patente, $marca, $modelo, $dniDuenio) {
         $a = new Auto($patente, $marca, $modelo, $dniDuenio);
-        $a->insertar();
+        return $a->insertar();
     }
 
     public function modificarAuto($patente, $marca, $modelo, $dniDuenio) {

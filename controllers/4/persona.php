@@ -16,7 +16,8 @@ class PersonaControl {
 
     public function agregarPersona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio) {
         $p = new Persona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio);
-        $p->insertar();
+        $rep = $p->insertar();
+        return $rep;
     }
 
     public function modificarPersona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio) {

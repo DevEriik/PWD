@@ -29,7 +29,7 @@ $autos = $autoCtrl->listarAutos();
             </tr>";
         
         foreach ($autos as $a){
-            $duenio = $personaCtrl->buscarPersona($a["DniDuenio"]); // devuelve objeto Persona o null
+            $duenio = $personaCtrl->buscarPersona($a["DniDuenio"]); 
             $nombreDuenio = $duenio ? $duenio->getApellido() . " " . $duenio->getNombre() : "Desconocido";
             
             echo "<tr>

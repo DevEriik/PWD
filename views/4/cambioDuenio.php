@@ -23,7 +23,7 @@
 </head>
 <body>
     <h1>Cambiar Dueño de Auto</h1>
-<form action="formAccion.php" method="post" onsubmit="return validarCambioDuenio();">
+<form action="views/action/actionForm.php" method="post" onsubmit="return validarCambioDuenio();">
     <input type="hidden" name="accion" value="cambiarDuenio">
 
     <label for="patente">Patente del Auto:</label>

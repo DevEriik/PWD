@@ -21,28 +21,28 @@
 </head>
 <body>
     <h1>Registrar Nueva Persona</h1>
-<form action="formAccion.php" method="post" onsubmit="return validarNuevaPersona();">
-    <input type="hidden" name="accion" value="nuevaPersona">
+    <form action="views/action/actionForm.php" method="post" onsubmit="return validarNuevaPersona();">
+        <input type="hidden" name="accion" value="nuevaPersona">
 
-    <label for="nroDni">DNI:</label>
-    <input type="text" id="nroDni" name="nroDni" maxlength="10">
+        <label for="nroDni">DNI:</label>
+        <input type="text" id="nroDni" name="nroDni" maxlength="10">
 
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido" maxlength="50">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" maxlength="50">
 
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" maxlength="50">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="50">
 
-    <label for="fechaNac">Fecha de Nacimiento:</label>
-    <input type="date" id="fechaNac" name="fechaNac">
+        <label for="fechaNac">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNac" name="fechaNac">
 
-    <label for="telefono">Teléfono:</label>
-    <input type="text" id="telefono" name="telefono" maxlength="20">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" maxlength="20">
 
-    <label for="domicilio">Domicilio:</label>
-    <input type="text" id="domicilio" name="domicilio" maxlength="200">
+        <label for="domicilio">Domicilio:</label>
+        <input type="text" id="domicilio" name="domicilio" maxlength="200">
 
-    <input type="submit" value="Registrar">
-</form>
+        <input type="submit" value="Registrar">
+    </form>
 </body>
 </html>

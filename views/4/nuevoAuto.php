@@ -21,7 +21,7 @@
 </head>
 <body>
     <h1>Registrar Nuevo Auto</h1>
-<form action="formAccion.php" method="post" onsubmit="return validarNuevoAuto();">
+<form action="views/action/actionForm.php" method="post" onsubmit="return validarNuevoAuto();">
     <input type="hidden" name="accion" value="nuevoAuto">
 
     <label for="patente">Patente:</label>
